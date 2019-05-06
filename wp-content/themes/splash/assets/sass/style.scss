@@ -1,0 +1,26 @@
+$sm_breakpoint: 768px;
+$md_breakpoint: 960px;
+$lg_breakpoint: 1600px;
+
+$sm_side_margin: 30px;
+$md_side_margin: 40px;
+$lg_side_margin: 60px;
+
+@import 'reset';
+@import 'grid';
+
+@import 'font-awesome/fontawesome';
+
+// Import variables
+@import 'variables';
+
+// Global
+@import 'global';
+
+
+@media screen and (max-width: $md_breakpoint) {
+	@import "mobile";
+}
+@media screen and (min-width: $md_breakpoint + 1) {
+	@import "desktop";
+}

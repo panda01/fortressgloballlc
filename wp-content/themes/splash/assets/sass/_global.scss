@@ -1,0 +1,120 @@
+html,
+body {
+    max-width: 100%;
+	font-size: 18px;
+	color: $color_black;
+}
+a {
+	text-decoration: none;
+	color: $color_black;
+	&:hover {
+		color: $color_red;
+	}
+}
+input,
+textarea {
+	box-sizing: border-box;
+}
+// Sticky Footer
+#page {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	> main {
+		flex-grow: 1;
+	}
+
+	#content {
+		min-height: 100%;
+	}
+}
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+p {
+	margin-bottom: 0;
+	+ p {
+		margin-top: 1rem;
+	}
+	+ .btn {
+		margin-top: 40px;
+	}
+}
+.main {
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+address {
+	margin-bottom: 0;
+}
+.hide {
+	display: none;
+}
+.btn_wrap {
+	margin-top: 40px;
+	&.center {
+		display: flex;
+		justify-content: space-around;
+	}
+	> .btn {
+		margin-top: 0;
+		+ .btn {
+			margin-left: 20px;
+		}
+	}
+}
+a {
+	img {
+		outline: none !important;
+	}
+	&:hover {
+		text-decoration: none;
+	}
+	&:active {
+		outline: none !important;
+	}
+}
+
+
+// FIXME make this a mixin
+.btn,
+.button {
+	height: 55px;
+	padding-left: 40px;
+	padding-right: 40px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	font-family: 'Circular Std Bold';
+	font-size: 21px;
+	box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.5);
+	color: $color_white;
+	background-color: $color_red;
+	cursor: pointer;
+	margin-bottom: 10px;
+	border: 0 none transparent;
+	&:hover {
+		text-decoration: none;
+		background-color: $color_black;
+		color: $color_white;
+	}
+	&.button-light {
+		color: $color_black;
+		background-color: $color_grey;
+		&.color-accent {
+			color: $color_red;
+		}
+		&:hover {
+			color: $color_white;
+			background-color: $color_black;
+		}
+	}
+}
+
+

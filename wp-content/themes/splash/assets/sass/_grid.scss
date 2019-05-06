@@ -1,0 +1,143 @@
+/*
+ *
+ * 	Sass Grid!
+ * 	An Awesome simple grid with actual columns, that prioritizes minimal mark up!
+ * 	Author: Khalah Jones-Golden<khasan222@gmail.com>
+ *
+ *
+ */
+
+@function calc_percent($divisor, $dividend) {
+	@return $divisor / $dividend * 100%
+}
+@function should_have_width_override($loopbreakpoint, $fnbreakpoint) {
+	@if $loopbreakpoint == $fnbreakpoint {
+		@return false;
+	}
+	@if $fnbreakpoint == 'largetop' {
+		@return false;
+	}
+	@return true;
+}
+$responsive_breakpoints: (
+	"sm": 		$sm_breakpoint,
+	"md": 		$md_breakpoint,
+	"lg": 		$lg_breakpoint
+);
+$responsive_side_margins: (
+	"sm": 		$sm_side_margin,
+	"md": 		$md_side_margin,
+	"lg": 		$lg_side_margin
+);
+// total width is simply (num_cols * col_width + num_cols * gutter_width)
+// Need to make it so that way you just give it col width and gutter width and we're alright
+$responsive_col_width: (
+	"sm": 		calc_percent(18, 324),
+	"md": 		calc_percent(39, 708),
+	"lg": 		calc_percent(60, 1200)
+);
+$responsive_gutter_width: (
+	"sm": 		calc_percent(9, 324),
+	"md": 		calc_percent(20, 708),
+	"lg": 		calc_percent(40, 1200)
+);
+
+$num_grid_columns: 12;
+
+.container {
+	box-sizing: border-box;
+	width: 100%;
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+		align-content: space-around;
+		position: relative;
+		&.centered,
+		&.center {
+			align-items: center;
+		}
+	}
+}
+@mixin cols($breakpoint) {
+	$breakpoint_container_margin: 		map-get($responsive_side_margins, $breakpoint);
+	$gutter_width: 						map-get($responsive_gutter_width, $breakpoint);
+	$col_width: 						map-get($responsive_col_width, $breakpoint);
+	.container {
+		padding-left: $breakpoint_container_margin;
+		padding-right: $breakpoint_container_margin;
+
+		.row {
+			margin-left: $gutter_width * -0.5;
+			margin-right: $gutter_width * -0.5;
+			width: calc(100% + #{$gutter_width});
+			// margin-bottom: -$gutter_width;
+			> {
+				.demo {
+					min-height: 30vh;
+					background-color: blue;
+					margin-bottom: $gutter_width;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				@each $margin_breakpoint_key in map-keys($responsive_breakpoints) {
+					@if should_have_width_override($margin_breakpoint_key, $breakpoint) {
+						[class*="col-#{$margin_breakpoint_key}-"] {
+							margin-left: $gutter_width / 2;
+							margin-right: $gutter_width / 2;
+							flex-basis: 100% - $gutter_width;
+							width: 100% - $gutter_width;
+						}
+					}
+				}
+				@for $col_num from 1 through $num_grid_columns {
+					.order-#{$breakpoint}-#{$col_num} {
+						order: $col_num - 6;
+					}
+					$calc_col_width: ($col_num * $col_width) + (($col_num - 1) * $gutter_width);
+					.col-#{$breakpoint}-#{$col_num} {
+						// FIXME having this makes the layout not as flexable
+						// with this you can't give the columns flex-direction
+						//
+						// flex-basis: $calc_col_width;
+						margin-left: $gutter_width / 2;
+						margin-right: $gutter_width / 2;
+						width: $calc_col_width;
+						max-width: $calc_col_width;
+					}
+					.offset-#{$breakpoint}-#{$col_num} {
+						margin-left: $calc_col_width + $gutter_width * 1.5 !important;
+					}
+				}
+			}
+		}
+	}
+	// TODO
+	// Do we really need this?
+	// and if we keep it, shouldn't it be display-mobile-none to keep with the format above?
+	.hide-#{$breakpoint} {
+		display: none !important;
+	}
+}
+
+
+$last_breakpoint_width: 0;
+@each $breakpoint in map-keys($responsive_breakpoints) {
+	$breakpoint_width: map-get($responsive_breakpoints, $breakpoint);
+	@if $breakpoint == 'lg' {
+		@media screen and (min-width: ($last_breakpoint_width + 1)) {
+			@include cols($breakpoint);
+		}
+	} @else if $breakpoint == 'sm' {
+		@media screen and (max-width: $breakpoint_width) {
+			@include cols($breakpoint);
+		}
+	} @else {
+		@media screen and (min-width: $last_breakpoint_width) and (max-width: $breakpoint_width) {
+			@include cols($breakpoint);
+		}
+	}
+	$last_breakpoint_width: map-get($responsive_breakpoints, $breakpoint);
+}
