@@ -282,9 +282,6 @@ section {
 }
 #whoweare {
 	margin-top: 100px;
-	.img {
-		margin-top: 75px;
-	}
 	.content {
 		margin-top: 125px;
 	}
@@ -300,10 +297,6 @@ section {
 	.info_square {
 		display: flex;
 		position: relative;
-		height: calc_vw(465);
-		&:nth-child(n + 3) {
-			margin-top: 125px;
-		}
 		&:after {
 			content: '+';
 			color: #fff;
@@ -333,8 +326,6 @@ section {
 			justify-content: center;
 			padding-left: 80px;
 			background-color: $color_tranlucent_black;
-			height: 172px;
-			width: 75%;
 			left: 0;
 			top: 0;
 		}
@@ -342,6 +333,8 @@ section {
 			display: none;
 		}
 	}
+}
+#pre_contactus {
 }
 #contactus {
 	margin-top: 160px;
@@ -356,10 +349,7 @@ section {
 		margin-top: 180px;
 	}
 	.contact_info_wrap {
-		padding: 90px 80px;
 		background-color: $color_tranlucent_black;
 		color: $color_white;
-		position: relative;
-		top: -190px;
 	}
 }

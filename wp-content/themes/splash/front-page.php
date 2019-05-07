@@ -25,10 +25,10 @@ get_header();
 		<h2 class="title"><?= $cover_text ?></h2>
 	</div>
 	<section id="whoweare" class="row">
-		<div class="col-lg-4">
+		<div class="col-lg-4 hide-sm hide-md">
 			<img class="img" src="<?= get_field('section_2_image') ?>" />
 		</div>
-		<div class="col-lg-8">
+		<div class="col-lg-8 content_part">
 			<h1 class="overlay_title"><?= get_field('section_2_title') ?></h1>
 			<div class="content">
 				<?= get_field('section_2_content'); ?>
@@ -50,7 +50,7 @@ get_header();
 			<?php endwhile; ?>
 		</div>
 	</section>
-	<section class="row">
+	<section id="pre_contactus" class="row">
 		<div class="splash_image_wrapper title_overlay_wrapper title_right col-lg-12">
 			<img class="img" src="<?php the_field('contact_us_primary_image'); ?>" />
 			<h2 class="title"><?php the_field('contact_us_tagline'); ?></h2>

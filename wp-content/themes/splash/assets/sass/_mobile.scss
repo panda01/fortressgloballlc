@@ -1,0 +1,35 @@
+h1 {
+	font-size: 45px;
+}
+h2 {
+	font-size: 36px;
+}
+h3 {
+}
+h4 {
+	font-size: 21px;
+}
+
+#whoweare {
+	.content_part {
+		order: -1;
+	}
+}
+#whatwedo {
+	.info_square {
+		height: 320px;
+		.title {
+			padding: 30px;
+		}
+	}
+}
+#pre_contactus {
+	.splash_image_wrapper {
+		max-height: 75vh;
+	}
+}
+#contactus {
+	.contact_info_wrap {
+		padding: 45px 40px;
+	}
+}
