@@ -26,7 +26,7 @@
 	}
 
 	function showGrid() {
-		var colClassName = 'col-lg-1 col-md-1 col-sm-1';
+		var colClassName = 'col-desktop-1 col-mobile-1 col-tablet-1';
 
 		var gridOverlay = document.createElement('div');
 		gridOverlay.setAttribute('class', 'row no_wrap');

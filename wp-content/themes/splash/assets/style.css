@@ -5005,9 +5005,24 @@ a:active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 60px; }
+  padding: 50px 60px;
+  transition: padding 300ms ease-in-out;
+  background-color: #fff;
+  position: fixed; }
+  #masthead + #content {
+    margin-top: 200px;
+    position: relative;
+    z-index: 2; }
+  #masthead.collapsed {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    top: 0;
+    z-index: 3; }
+    #masthead.collapsed .logo {
+      height: 40px; }
   #masthead .logo {
-    height: 100px; }
+    height: 100px;
+    transition: height 300ms ease-in-out; }
     #masthead .logo > img {
       max-height: 100%; }
   #masthead .menu {

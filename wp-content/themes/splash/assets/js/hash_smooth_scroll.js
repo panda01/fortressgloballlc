@@ -13,8 +13,19 @@
 				if(!shouldSmoothTransition) {
 					return true;
 				}
-				var $targetSection = document.querySelector(anchorHash);
-				var targetTopPos = $targetSection.getBoundingClientRect().top;
+				var isGoingToTop = anchorHash.length === 0;
+
+				var targetTopPos = 0;
+				if(!isGoingToTop) {
+
+					var $targetSection = document.querySelector(anchorHash);
+					var EXTRA_TOP_PADDING = 60;
+					targetTopPos = $targetSection.getBoundingClientRect().top + window.scrollY - EXTRA_TOP_PADDING;
+				}
+				if(targetTopPos < 0) {
+					targetTopPos = 0;
+					debugger;
+				}
 				evt.preventDefault();
 
 				customScrollTo(window.scrollY, targetTopPos, 900);

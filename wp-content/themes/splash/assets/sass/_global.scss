@@ -205,14 +205,34 @@ $title_overlap: 40px;
 	}
 }
 
+$transition_timer: 300ms;
 #masthead {
 	@extend .container;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 50px $lg_side_margin;
+	transition: padding $transition_timer ease-in-out;
+	background-color: #fff;
+	position: fixed;
+	+ #content {
+		margin-top: 200px;
+		position: relative;
+		z-index: 2;
+	}
+	&.collapsed {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		top: 0;
+		z-index: 3;
+		.logo {
+			height: 40px;
+		}
+
+	}
 	.logo {
 		height: 100px;
+		transition: height $transition_timer ease-in-out;
 		> img {
 			max-height: 100%;
 		}
