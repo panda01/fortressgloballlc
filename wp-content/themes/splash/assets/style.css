@@ -5128,13 +5128,34 @@ section + section {
   h4 {
     font-size: 21px; }
 
+  .wpcf7 .wpcf7-submit {
+    width: 100%; }
+
+  #masthead .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+  #masthead .menu {
+    justify-content: flex-end;
+    flex-wrap: wrap; }
+    #masthead .menu .menu-item + .menu-item {
+      margin-left: 5px; }
+
+  #mastfooter .left_section {
+    display: none; }
+
   #whoweare .content_part {
     order: -1; }
 
   #whatwedo .info_square {
     height: 320px; }
+    #whatwedo .info_square:after {
+      font-size: 50px; }
+    #whatwedo .info_square + .info_square {
+      margin-top: 30px; }
     #whatwedo .info_square .title {
-      padding: 30px; }
+      padding: 30px;
+      justify-content: flex-start; }
 
   #pre_contactus .splash_image_wrapper {
     max-height: 75vh; }

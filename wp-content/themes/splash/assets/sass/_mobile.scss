@@ -9,7 +9,31 @@ h3 {
 h4 {
 	font-size: 21px;
 }
+.wpcf7 {
+	.wpcf7-submit {
+		width: 100%;
+	}
+}
 
+#masthead {
+	.logo {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.menu {
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		.menu-item + .menu-item {
+			margin-left: 5px;
+		}
+	}
+}
+#mastfooter {
+	.left_section {
+		display: none;
+	}
+}
 #whoweare {
 	.content_part {
 		order: -1;
@@ -18,8 +42,15 @@ h4 {
 #whatwedo {
 	.info_square {
 		height: 320px;
+		&:after {
+			font-size: 50px;
+		}
+		+ .info_square {
+			margin-top: 30px;
+		}
 		.title {
 			padding: 30px;
+			justify-content: flex-start;
 		}
 	}
 }
