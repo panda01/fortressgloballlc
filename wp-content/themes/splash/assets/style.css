@@ -4998,7 +4998,7 @@ a:active {
   .title_overlay_wrapper .img {
     object-fit: cover;
     object-position: center;
-    width: 100%;
+    width: calc(100% - 40px);
     margin-left: 40px; }
 
 #masthead {
@@ -5008,7 +5008,9 @@ a:active {
   padding: 50px 60px;
   transition: padding 300ms ease-in-out;
   background-color: #fff;
-  position: fixed; }
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%); }
   #masthead + #content {
     margin-top: 200px;
     position: relative;

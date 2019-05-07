@@ -200,7 +200,7 @@ $title_overlap: 40px;
 	.img {
 		object-fit: cover;
 		object-position: center;
-		width: 100%;
+		width: calc(100% - #{$title_overlap});
 		margin-left: $title_overlap;
 	}
 }
@@ -215,6 +215,8 @@ $transition_timer: 300ms;
 	transition: padding $transition_timer ease-in-out;
 	background-color: #fff;
 	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
 	+ #content {
 		margin-top: 200px;
 		position: relative;
