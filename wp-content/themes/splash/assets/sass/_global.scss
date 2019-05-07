@@ -211,18 +211,21 @@ $transition_timer: 300ms;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 50px $lg_side_margin;
-	transition: padding $transition_timer ease-in-out;
-	background-color: #fff;
+	padding-left: $lg_side_margin;
+	padding-right: $lg_side_margin;
+	padding-top: 50px;
+	transition: padding $transition_timer ease-in-out, background-color $transition_timer ease-in-out;
 	position: fixed;
 	left: 50%;
 	transform: translateX(-50%);
+	z-index: 2;
+	background-color: #fff;
 	+ #content {
 		margin-top: 200px;
 		position: relative;
-		z-index: 2;
 	}
 	&.collapsed {
+		margin-top: 0;
 		padding-top: 10px;
 		padding-bottom: 10px;
 		top: 0;

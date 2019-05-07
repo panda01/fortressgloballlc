@@ -1,5 +1,5 @@
 (function() {
-	var WINDOW_SCROLL_THRESHOLD = 5;
+	var WINDOW_SCROLL_THRESHOLD = 10;
 	var HEADER_SELECTOR = 'header';
 	var HEADER_COLLAPSED_CLASS = 'collapsed';
 	function attachScrollEvents() {
@@ -17,6 +17,8 @@
 				});
 			}
 		}, 10));
+		var fakeScrollEvt = new Event('scroll');
+		window.dispatchEvent(fakeScrollEvt);
 	}
 
 	//Taken from Underscore
