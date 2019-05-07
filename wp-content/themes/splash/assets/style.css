@@ -5033,6 +5033,9 @@ a:active {
     #mastfooter a:hover {
       color: #005995; }
 
+section + section {
+  margin-top: 100px; }
+
 #cover_image {
   height: calc(90vh - 200px); }
 
@@ -5091,8 +5094,6 @@ a:active {
 
 #contactus {
   margin-top: 160px; }
-  #contactus .overlay_title {
-    margin-top: 130px; }
   #contactus .contact_form_wrapper {
     margin-top: 50px; }
   #contactus .wpcf7 {

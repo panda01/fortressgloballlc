@@ -26,7 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentynineteen' ); ?></a>
 
 	<header id="masthead">
-		<a href="/" class="logo">
+		<a href="#" class="logo">
 			<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/fortress_logo.png" />
 		</a>
 

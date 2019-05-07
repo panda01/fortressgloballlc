@@ -247,6 +247,11 @@ $title_overlap: 40px;
 		}
 	}
 }
+section {
+	+ section {
+		margin-top: 100px;
+	}
+}
 #cover_image {
 	height: calc(90vh - 200px);
 }
@@ -315,9 +320,6 @@ $title_overlap: 40px;
 }
 #contactus {
 	margin-top: 160px;
-	.overlay_title {
-		margin-top: 130px;
-	}
 	.contact_form_wrapper {
 		margin-top: 50px;
 	}

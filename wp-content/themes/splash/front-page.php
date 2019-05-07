@@ -50,11 +50,13 @@ get_header();
 			<?php endwhile; ?>
 		</div>
 	</section>
-	<section id="contactus" class="row">
+	<section class="row">
 		<div class="splash_image_wrapper title_overlay_wrapper title_right col-lg-12">
 			<img class="img" src="<?php the_field('contact_us_primary_image'); ?>" />
 			<h2 class="title"><?php the_field('contact_us_tagline'); ?></h2>
 		</div>
+	</section>
+	<section id="contactus" class="row">
 		<h1 class="overlay_title col-lg-9"><?php the_field('contact_us_secondary_title'); ?></h1>
 		<div class="contact_form_wrapper col-lg-6 offset-lg-1">
 			<div class="content h4">

@@ -310,6 +310,7 @@ function twentyseventeen_scripts() {
 	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
 
 	wp_enqueue_script( 'overlay_grid', get_theme_file_uri( '/assets/js/layout_grid.js' ), array(), '1.0.1', true );
+	wp_enqueue_script( 'hash_smooth_scroll', get_theme_file_uri( '/assets/js/hash_smooth_scroll.js' ), array(), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
 
