@@ -1,14 +1,8 @@
-html,
-body {
-    max-width: 100%;
-	font-size: 18px;
-	color: $color_black;
-}
 a {
 	text-decoration: none;
-	color: $color_black;
+	color: inherit;
 	&:hover {
-		color: $color_red;
+		color: $color_blue;
 	}
 }
 input,
@@ -30,7 +24,6 @@ textarea {
 }
 img {
 	max-width: 100%;
-	max-height: 100%;
 }
 p {
 	margin-bottom: 0;
@@ -41,6 +34,12 @@ p {
 		margin-top: 40px;
 	}
 }
+address {
+	margin-bottom: 0;
+}
+.screen-reader-text {
+	display: none;
+}
 .main {
 	ul {
 		display: flex;
@@ -48,9 +47,6 @@ p {
 		flex-direction: column;
 		align-items: flex-start;
 	}
-}
-address {
-	margin-bottom: 0;
 }
 .hide {
 	display: none;
@@ -97,7 +93,6 @@ a {
 	color: $color_white;
 	background-color: $color_red;
 	cursor: pointer;
-	margin-bottom: 10px;
 	border: 0 none transparent;
 	&:hover {
 		text-decoration: none;
@@ -116,5 +111,228 @@ a {
 		}
 	}
 }
+$element_height: 75px;
+.wpcf7 {
+	.wpcf7-form {
+		p {
+			margin-top: 0;
+			+ p {
+				margin-top: 30px;
+			}
+		}
+	}
+	.wpcf7-form-control-wrap {
+		display: flex;
+		+ .wpcf7-form-control-wrap {
+		}
+	}
+	.wpcf7-textarea,
+	.wpcf7-text {
+		width: 100%;
+		background-color: transparent;
+		border: 0 none transparent;
+		border-bottom: 1px solid $color_grey;
+		color: $color_black;
+		height: 75px;
+		line-height: 75px;
+		font-size: 18px;
+		padding-left: 30px;
+		&:focus {
+			outline: none;
+			border-bottom-color: $color_black;
+		}
+	}
+	.wpcf7-textarea {
+		height: 150px;
+		line-height: 1.4em;
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+	.wpcf7-submit {
+		background-color: $color_light_blue;
+		font-weight: 800;
+		font-size: 18px;
+		color: $color_white;
+		border: 0 none transparent;
+		min-width: 200px;
+		padding: 0 30px;
+		height: 70px;
+	}
+}
+/*
+ * Custom Styles
+ *
+ */
+%overlay_title {
+	display: flex;
+	align-items: center;
+	padding-left: 40px;
+	background-color: $color_blue;
+	color: $color_white;
+	min-height: 200px;
+}
+.overlay_title {
+	@extend %overlay_title;
+}
+$title_overlap: 40px;
+.title_overlay_wrapper {
+	display: flex;
+	position: relative;
+	&.title_right {
+		.img {
+			position: relative;
+			margin-left: 0;
+			width: calc(100% - #{$title_overlap});
+		}
+		.title {
+			text-align: right;
+			padding-right: 50px;
+			left: auto;
+			right: 0;
+		}
+	}
+	.title {
+		@extend %overlay_title;
+		position: absolute;
+		top: 50px;
+		left: 0;
+	}
+	.img {
+		object-fit: cover;
+		object-position: center;
+		width: 100%;
+		margin-left: $title_overlap;
+	}
+}
 
-
+#masthead {
+	@extend .container;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 50px $lg_side_margin;
+	.logo {
+		height: 100px;
+		> img {
+			max-height: 100%;
+		}
+	}
+	.menu {
+		display: flex;
+		.menu-item + .menu-item {
+			margin-left: 80px;
+		}
+	}
+}
+#mastfooter {
+	background-color: $color_black;
+	color: $color_white;
+	margin-top: 145px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	.site-info {
+		@extend .container;
+		display: flex;
+		justify-content: space-between;
+	}
+	.footer-menu {
+		display: flex;
+	}
+	a {
+		color: $color_white;
+		&:hover {
+			color: $color_blue;
+		}
+	}
+}
+#cover_image {
+	height: calc(100vh - 200px);
+}
+#whoweare {
+	margin-top: 100px;
+	.img {
+		margin-top: 75px;
+	}
+	.content {
+		margin-top: 125px;
+	}
+}
+#whatwedo {
+	margin-top: 125px;
+	.title {
+		text-align: center;
+	}
+	.content {
+		margin-top: 30px;
+	}
+	.info_square {
+		display: flex;
+		position: relative;
+		height: calc_vw(465);
+		&:nth-child(n + 3) {
+			margin-top: 125px;
+		}
+		&:after {
+			content: '+';
+			color: #fff;
+			width: 60px;
+			height: 60px;
+			font-size: 80px;
+			font-weight: bold;
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			right: 0;
+			bottom: 0;
+			background-color: $color_light_blue;
+		}
+		.img {
+			padding: 50px 60px 60px 50px;
+			object-fit: cover;
+			object-position: center;
+		}
+		.title {
+			position: absolute;
+			color: $color_white;
+			font-weight: bold;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding-left: 80px;
+			background-color: $color_tranlucent_black;
+			height: 172px;
+			width: 75%;
+			left: 0;
+			top: 0;
+		}
+		.content {
+			display: none;
+		}
+	}
+}
+#contactus {
+	margin-top: 160px;
+	.overlay_title {
+		margin-top: 130px;
+	}
+	.contact_form_wrapper {
+		margin-top: 50px;
+	}
+	.wpcf7 {
+		margin-top: 50px;
+	}
+	.address_background_img {
+		width: 100%;
+		margin-top: 180px;
+	}
+	.contact_info_wrap {
+		padding: 90px 80px;
+		background-color: $color_tranlucent_black;
+		color: $color_white;
+		position: relative;
+		top: -190px;
+	}
+}

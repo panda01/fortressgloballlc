@@ -16,6 +16,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,400,900" rel="stylesheet">
+
 	<?php wp_head(); ?>
 </head>
 
@@ -24,18 +26,15 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentynineteen' ); ?></a>
 
 	<header id="masthead">
+		<a href="/" class="logo">
+			<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/fortress_logo.png" />
+		</a>
 
-		<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'twentynineteen' ); ?>">
+		<nav class="header_navigation" role="navigation" aria-label="Main Menu">
 			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'primary',
-					'menu_class'     => 'footer-menu',
-					'depth'          => 1,
-				)
-			);
+			wp_nav_menu(array('theme_location' => 'top'));
 			?>
 		</nav><!-- .footer-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<main id="content" role="main" class="container">

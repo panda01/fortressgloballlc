@@ -44,7 +44,7 @@ $responsive_gutter_width: (
 
 $num_grid_columns: 12;
 
-.container {
+%base_container {
 	box-sizing: border-box;
 	width: 100%;
 	.row {
@@ -58,7 +58,14 @@ $num_grid_columns: 12;
 		&.center {
 			align-items: center;
 		}
+		.row {
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
 	}
+}
+.container {
+	@extend %base_container;
 }
 @mixin cols($breakpoint) {
 	$breakpoint_container_margin: 		map-get($responsive_side_margins, $breakpoint);
@@ -67,6 +74,9 @@ $num_grid_columns: 12;
 	.container {
 		padding-left: $breakpoint_container_margin;
 		padding-right: $breakpoint_container_margin;
+		max-width: calc(1400px + #{2 * $breakpoint_container_margin});
+		margin-left: auto;
+		margin-right: auto;
 
 		.row {
 			margin-left: $gutter_width * -0.5;
@@ -98,10 +108,6 @@ $num_grid_columns: 12;
 					}
 					$calc_col_width: ($col_num * $col_width) + (($col_num - 1) * $gutter_width);
 					.col-#{$breakpoint}-#{$col_num} {
-						// FIXME having this makes the layout not as flexable
-						// with this you can't give the columns flex-direction
-						//
-						// flex-basis: $calc_col_width;
 						margin-left: $gutter_width / 2;
 						margin-right: $gutter_width / 2;
 						width: $calc_col_width;
@@ -110,13 +116,15 @@ $num_grid_columns: 12;
 					.offset-#{$breakpoint}-#{$col_num} {
 						margin-left: $calc_col_width + $gutter_width * 1.5 !important;
 					}
+					// TODO make this Pull a thing, like the opposite of offset
+					//
+					// .pull-#{$breakpoint}-#{$col_num} {
+					// margin-left: ($calc_col_width + $gutter_width * 1.5) * -1 !important;
+					// }
 				}
 			}
 		}
 	}
-	// TODO
-	// Do we really need this?
-	// and if we keep it, shouldn't it be display-mobile-none to keep with the format above?
 	.hide-#{$breakpoint} {
 		display: none !important;
 	}

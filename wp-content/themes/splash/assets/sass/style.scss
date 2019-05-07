@@ -9,10 +9,14 @@ $lg_side_margin: 60px;
 @import 'reset';
 @import 'grid';
 
+@import 'font-awesome/solid';
 @import 'font-awesome/fontawesome';
 
 // Import variables
 @import 'variables';
+
+// Fonts
+@import 'fonts';
 
 // Global
 @import 'global';
