@@ -5178,15 +5178,18 @@ body.js_clicked_open {
   .wpcf7 .wpcf7-submit {
     width: 100%; }
 
-  #masthead .logo {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; }
-  #masthead .menu {
-    justify-content: flex-end;
-    flex-wrap: wrap; }
-    #masthead .menu .menu-item + .menu-item {
-      margin-left: 5px; }
+  #masthead {
+    padding-left: 20px;
+    padding-right: 20px; }
+    #masthead .logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; }
+    #masthead .menu {
+      justify-content: flex-end;
+      flex-wrap: wrap; }
+      #masthead .menu .menu-item + .menu-item {
+        margin-left: 5px; }
 
   #mastfooter .left_section {
     display: none; }
