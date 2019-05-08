@@ -5087,6 +5087,45 @@ section + section {
       right: 0;
       bottom: 0;
       background-color: #10a5dd; }
+    #whatwedo .info_square.js_clicked_open {
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: auto;
+      height: auto;
+      max-width: none;
+      margin: 0;
+      overflow-y: scroll;
+      background-color: rgba(45, 41, 42, 0.9);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #whatwedo .info_square.js_clicked_open:after {
+        display: none; }
+      #whatwedo .info_square.js_clicked_open .info_square_inner {
+        max-width: 64.28571vw;
+        position: relative; }
+      #whatwedo .info_square.js_clicked_open .img {
+        padding: 0;
+        width: 100%;
+        max-height: 200px; }
+      #whatwedo .info_square.js_clicked_open .title {
+        position: static;
+        height: auto;
+        background-color: #231f20;
+        padding-top: 90px;
+        width: 100%;
+        padding-left: 100px;
+        justify-content: flex-start; }
+      #whatwedo .info_square.js_clicked_open .content {
+        height: auto;
+        padding: 0 100px 95px 100px;
+        position: static;
+        margin: 0;
+        background-color: #231f20; }
     #whatwedo .info_square .img {
       padding: 50px 60px 60px 50px;
       object-fit: cover;
@@ -5103,7 +5142,15 @@ section + section {
       left: 0;
       top: 0; }
     #whatwedo .info_square .content {
-      display: none; }
+      position: absolute;
+      bottom: 0;
+      overflow: hidden;
+      height: 0;
+      background-color: #231f20;
+      color: #FFF; }
+
+body.js_clicked_open {
+  overflow: hidden; }
 
 #contactus {
   margin-top: 160px; }
@@ -5151,6 +5198,10 @@ section + section {
     height: 320px; }
     #whatwedo .info_square:after {
       font-size: 50px; }
+    #whatwedo .info_square.js_clicked_open .content {
+      padding: 20px; }
+    #whatwedo .info_square.js_clicked_open .info_square_inner {
+      max-width: 80vw; }
     #whatwedo .info_square + .info_square {
       margin-top: 30px; }
     #whatwedo .info_square .title {

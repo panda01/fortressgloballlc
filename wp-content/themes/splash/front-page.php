@@ -40,14 +40,17 @@ get_header();
 		<div class="col-lg-12 content"></div>
 		<div class="row">
 			<?php
+				$idx = 0;
 				while(have_rows('info_section')): the_row();
 			?>
-				<div class="col-lg-6 info_square">
-					<img class="img" src="<?php the_sub_field('image'); ?>" />
-					<h4 class="title"><?php the_sub_field('title'); ?></h4>
-					<div class="content"><?php the_sub_field('content'); ?></div>
+				<div class="col-lg-6 info_square" data-js-click="#content_<?= $idx ?>">
+					<div class="info_square_inner">
+						<img class="img" src="<?php the_sub_field('image'); ?>" />
+						<h4 class="title"><?php the_sub_field('title'); ?></h4>
+						<div id="content_<?= $idx; ?>" class="content"><?php the_sub_field('content'); ?></div>
+					</div>
 				</div>
-			<?php endwhile; ?>
+			<?php $idx++; endwhile; ?>
 		</div>
 	</section>
 	<section id="pre_contactus" class="row">
