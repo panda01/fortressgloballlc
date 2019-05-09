@@ -27,7 +27,7 @@ get_header();
 		<h2 class="title"><?= $cover_text ?></h2>
 	</div>
 	<section id="whoweare" class="row">
-		<div class="col-lg-4 hide-sm hide-md">
+		<div class="col-lg-4 hide-sm hide-md js_parallax_img_wrap">
 			<img class="img" src="<?= get_field('section_2_image')['sizes']['desktop_med'] ?>" />
 		</div>
 		<div class="col-lg-8 content_part">

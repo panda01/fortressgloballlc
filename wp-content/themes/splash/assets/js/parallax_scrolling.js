@@ -1,4 +1,10 @@
 (function() {
+	// FIXME
+	//
+	// This doesn't really work as expected. The math is hard 
+	// and has to be adjusted so that way you can never see 
+	// repeat images
+	//
 	// TODO this can easily be on a per element basis.
 	var PARALLAX_SCROLL_RATIO = 1.35;
 	var PARALLAX_IMG_SELECTOR = '.js_parallax_img_wrap';
@@ -19,7 +25,7 @@
 			var wrapperHeight = $img_wrapper.getBoundingClientRect().height;
 			var image_src = $imgEl.src;
 			$imgEl.setAttribute('style', 'visibility: hidden');
-			$img_wrapper.setAttribute('style', 'background-image: url(' + image_src + '); height: 100%; position: relative; background-position-x: 50%; background-size: auto ' + (PARALLAX_SCROLL_RATIO * 100) + 'vh;');
+			$img_wrapper.setAttribute('style', 'background-image: url(' + image_src + '); background-position-x: 50%; background-size: auto ' + (PARALLAX_SCROLL_RATIO * 100) + 'vh;');
 		});
 		window.addEventListener('scroll', debounce(function(evt) {
 			$imgWrappers.forEach(function($wrapper) {
