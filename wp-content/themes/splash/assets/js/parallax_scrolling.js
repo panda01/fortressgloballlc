@@ -43,8 +43,6 @@
 					var adjustedDiff = diff + wrapperPos.height;
 					var progressThrough = adjustedDiff / (wrapperPos.height * 2) * 100;
 					jQuery($wrapper).css('background-position-y',  progressThrough + '%');
-					console.log(diff);
-					console.log($wrapper);
 				}
 			});
 		}, 10));

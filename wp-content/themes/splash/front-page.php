@@ -45,12 +45,12 @@ get_header();
 				$idx = 0;
 				while(have_rows('info_section')): the_row();
 			?>
-				<div class="col-lg-6 info_square" data-js-click="#content_<?= $idx ?>">
+				<div class="col-lg-6 info_square" data-js-click="body, #content_<?= $idx ?>">
 					<div class="info_square_inner">
 						<img class="img" src="<?php echo get_sub_field('image')['sizes']['medium_large']; ?>" />
 						<h4 class="title"><?php the_sub_field('title'); ?></h4>
 						<div id="content_<?= $idx; ?>" class="content"><?php the_sub_field('content'); ?></div>
-						<div class="cross"></div>
+						<div class="plus"></div>
 					</div>
 				</div>
 			<?php $idx++; endwhile; ?>

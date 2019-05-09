@@ -31,6 +31,15 @@
 		</a>
 
 		<nav class="header_navigation" role="navigation" aria-label="Main Menu">
+			<div class="mobile_bars" data-js-click=".header_navigation .menu-header-container, .menu_close_x">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+			<div class="menu_close_x" data-js-click=".header_navigation .menu-header-container, .mobile_bars">
+				<div class="cross"></div>
+				<div class="cross"></div>
+			</div>
 			<?php
 			wp_nav_menu(array('theme_location' => 'top'));
 			?>

@@ -4972,6 +4972,7 @@ a:active {
   display: flex;
   align-items: center;
   padding-left: 40px;
+  padding-right: 20px;
   background-color: #005995;
   color: #FFF;
   min-height: 200px; }
@@ -5001,7 +5002,7 @@ a:active {
 #masthead {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   padding-left: 60px;
   padding-right: 60px;
   padding-top: 50px;
@@ -5022,6 +5023,9 @@ a:active {
     z-index: 3; }
     #masthead.collapsed .logo {
       height: 40px; }
+  #masthead .menu_close_x,
+  #masthead .mobile_bars {
+    display: none; }
   #masthead .logo {
     height: 100px;
     transition: height 300ms ease-in-out; }
@@ -5069,23 +5073,23 @@ section + section {
     text-align: center; }
   #whatwedo .info_square {
     position: relative; }
-    #whatwedo .info_square .cross {
+    #whatwedo .info_square .plus {
       width: 60px;
       height: 60px;
       position: absolute;
       right: 0;
       bottom: 0;
       background-color: #10a5dd; }
-      #whatwedo .info_square .cross:after, #whatwedo .info_square .cross:before {
+      #whatwedo .info_square .plus:after, #whatwedo .info_square .plus:before {
         content: '';
         background-color: #fff;
         position: absolute; }
-      #whatwedo .info_square .cross:before {
+      #whatwedo .info_square .plus:before {
         height: 40px;
         width: 10px;
         left: 25px;
         top: 10px; }
-      #whatwedo .info_square .cross:after {
+      #whatwedo .info_square .plus:after {
         width: 40px;
         height: 10px;
         top: 25px;
@@ -5193,9 +5197,61 @@ body.js_clicked_open {
       display: flex;
       justify-content: flex-start;
       align-items: center; }
+    #masthead .menu_close_x {
+      height: 115px;
+      display: block;
+      position: fixed;
+      right: -50px;
+      width: 50px;
+      top: 0; }
+      #masthead .menu_close_x.js_clicked_open {
+        right: 350px; }
+      #masthead .menu_close_x .cross {
+        width: 30px;
+        height: 2px;
+        background-color: #005995;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg); }
+        #masthead .menu_close_x .cross + .cross {
+          transform: translateY(-50%) rotate(135deg); }
+    #masthead .menu-header-container {
+      height: 100vh;
+      background-color: #10a5dd;
+      position: fixed;
+      top: 0;
+      right: 0;
+      transform: translateX(100%);
+      transition: transform 400ms ease-in-out;
+      width: 300px; }
+      #masthead .menu-header-container .menu-item {
+        height: 115px;
+        border-bottom: 1px solid #CACACA;
+        color: #FFF;
+        padding-left: 30px;
+        display: flex;
+        align-items: center; }
+      #masthead .menu-header-container.js_clicked_open {
+        transform: translateX(0%); }
+    #masthead .header_navigation {
+      display: flex;
+      align-items: center; }
+      #masthead .header_navigation .mobile_bars {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 25px; }
+        #masthead .header_navigation .mobile_bars .bar {
+          width: 30px;
+          height: 4px;
+          background-color: #005995; }
+          #masthead .header_navigation .mobile_bars .bar + .bar {
+            margin-top: 4px; }
     #masthead .menu {
       justify-content: flex-end;
-      flex-wrap: wrap; }
+      flex-direction: column; }
       #masthead .menu .menu-item + .menu-item {
         margin-left: 5px; }
 

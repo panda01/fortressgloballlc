@@ -164,6 +164,7 @@ $element_height: 75px;
 	display: flex;
 	align-items: center;
 	padding-left: 40px;
+	padding-right: 20px;
 	background-color: $color_blue;
 	color: $color_white;
 	min-height: 200px;
@@ -207,7 +208,7 @@ $transition_timer: 300ms;
 	@extend .container;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: stretch;
 	padding-left: $lg_side_margin;
 	padding-right: $lg_side_margin;
 	padding-top: 50px;
@@ -231,6 +232,10 @@ $transition_timer: 300ms;
 			height: 40px;
 		}
 
+	}
+	.menu_close_x,
+	.mobile_bars {
+		display: none;
 	}
 	.logo {
 		height: 100px;
@@ -297,7 +302,7 @@ section {
 		$cross_width: 10px;
 		$cross_color: #fff;
 		$cross_box_size: 60px;
-		.cross {
+		.plus {
 			width: $cross_box_size;
 			height: $cross_box_size;
 			position: absolute;
