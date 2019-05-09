@@ -231,11 +231,15 @@ $transition_timer: 300ms;
 		.logo {
 			height: 40px;
 		}
-
+	}
+	.header_navigation {
+		display: flex;
+		align-items: center;
 	}
 	.menu_close_x,
 	.mobile_bars {
 		display: none;
+		cursor: pointer;
 	}
 	.logo {
 		height: 100px;
@@ -329,6 +333,7 @@ section {
 			}
 		}
 		&.js_clicked_open {
+			margin-top: 0 !important;
 			position: fixed;
 			z-index: 10;
 			top: 0;
@@ -346,13 +351,16 @@ section {
 			align-items: center;
 			&:after { display: none; }
 			.info_square_inner {
-				max-width: calc_vw(900);
+				left: 25vw;
+				margin-top: 100px;
+				margin-bottom: 100px;
+				max-width: 50vw;
 				position: relative;
+				flex-direction: column;
 			}
 			.img {
 				padding: 0;
 				width: 100%;
-				max-height: 200px;
 			}
 			.title {
 				position: static;
@@ -365,11 +373,13 @@ section {
 			}
 			.content {
 				margin: 0;
-				margin-top: 30px;
 				height: auto;
-				padding: 0 100px 95px 100px;
+				padding: 30px 100px 95px 100px;
 				position: static;
 				background-color: $color_black;
+			}
+			.plus {
+				display: none;
 			}
 		}
 		.info_square_inner {
@@ -382,12 +392,13 @@ section {
 			object-position: center;
 		}
 		.title {
+			text-align: left;
 			position: absolute;
 			color: $color_white;
 			font-weight: bold;
 			display: flex;
 			align-items: center;
-			justify-content: center;
+			justify-content: flex-start;
 			padding-left: 80px;
 			padding-right: 40px;
 			background-color: $color_tranlucent_black;

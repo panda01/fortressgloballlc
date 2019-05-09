@@ -109,20 +109,20 @@ h4 {
 }
 #whatwedo {
 	.info_square {
-		height: 320px;
-		&:after {
-			font-size: 50px;
-		}
 		&.js_clicked_open {
 			.content {
 				padding: 20px;
 			}
 			.info_square_inner {
+				left: 10vw;
 				max-width: 80vw
 			}
 		}
 		+ .info_square {
 			margin-top: 30px;
+		}
+		.img {
+			height: auto;
 		}
 		.title {
 			padding: 30px;
