@@ -1,4 +1,3 @@
-
 (function() {
 
 	function attachHashChangeEvent() {
@@ -24,7 +23,6 @@
 				}
 				if(targetTopPos < 0) {
 					targetTopPos = 0;
-					debugger;
 				}
 				evt.preventDefault();
 

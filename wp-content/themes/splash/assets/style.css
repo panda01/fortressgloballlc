@@ -4967,10 +4967,7 @@ a:active {
   padding: 0 30px;
   height: 70px; }
 
-/*
- * Custom Styles
- *
- */
+/* Custom Styles */
 .overlay_title, .title_overlay_wrapper .title {
   display: flex;
   align-items: center;
@@ -4995,7 +4992,7 @@ a:active {
     position: absolute;
     top: 50px;
     left: 0; }
-  .title_overlay_wrapper .img {
+  .title_overlay_wrapper .img_wrap {
     object-fit: cover;
     object-position: center;
     width: calc(100% - 40px);
@@ -5058,6 +5055,8 @@ section + section {
 
 #cover_image {
   height: calc(90vh - 200px); }
+  #cover_image .img_wrap {
+    overflow: hidden; }
 
 #whoweare {
   margin-top: 100px; }

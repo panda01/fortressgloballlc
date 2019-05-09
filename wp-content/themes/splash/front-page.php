@@ -21,7 +21,9 @@ get_header();
 		$cover_img = get_field('cover_image')['sizes']['desktop_large'];
 		$cover_text = get_field('cover_text');
 		?>
-		<img class="img" src="<?= $cover_img ?>" />
+		<div class="img_wrap js_parallax_img_wrap">
+			<img class="img" src="<?= $cover_img ?>" />
+		</div>
 		<h2 class="title"><?= $cover_text ?></h2>
 	</div>
 	<section id="whoweare" class="row">
@@ -55,7 +57,9 @@ get_header();
 	</section>
 	<section id="pre_contactus" class="row">
 		<div class="splash_image_wrapper title_overlay_wrapper title_right col-lg-12">
-			<img class="img" src="<?= get_field('contact_us_primary_image')['sizes']['desktop_large']; ?>" />
+			<div class="img_wrap js_parallax_img_wrap">
+				<img class="img" src="<?= get_field('contact_us_primary_image')['sizes']['desktop_large']; ?>" />
+			</div>
 			<h2 class="title"><?php the_field('contact_us_tagline'); ?></h2>
 		</div>
 	</section>
