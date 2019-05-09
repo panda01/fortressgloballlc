@@ -5201,11 +5201,12 @@ body.js_clicked_open {
       height: 115px;
       display: block;
       position: fixed;
-      right: -50px;
-      width: 50px;
+      left: 100%;
+      width: 60px;
       top: 0; }
       #masthead .menu_close_x.js_clicked_open {
-        right: 350px; }
+        left: calc(100% - 50px);
+        z-index: 10; }
       #masthead .menu_close_x .cross {
         width: 30px;
         height: 2px;
