@@ -67,7 +67,7 @@ get_header();
 			</div>
 		</div>
 		<div class="col-lg-5">
-			<img class="address_background_img" src="<?= get_field('contact_us_secondary_image')['sizes']['desktop_med']; ?>" />
+			<img class="address_background_img" src="<?= get_field('contact_us_secondary_image')['sizes']['medium_large']; ?>" />
 		</div>
 		<address class="contact_info_wrap col-lg-6 offset-lg-5">
 			<?php the_field('address', 'option'); ?>
