@@ -45,7 +45,7 @@ get_header();
 			?>
 				<div class="col-lg-6 info_square" data-js-click="#content_<?= $idx ?>">
 					<div class="info_square_inner">
-						<img class="img" src="<?php echo get_sub_field('image')['sizes']['desktop_med']; ?>" />
+						<img class="img" src="<?php echo get_sub_field('image')['sizes']['medium_large']; ?>" />
 						<h4 class="title"><?php the_sub_field('title'); ?></h4>
 						<div id="content_<?= $idx; ?>" class="content"><?php the_sub_field('content'); ?></div>
 					</div>
@@ -55,7 +55,7 @@ get_header();
 	</section>
 	<section id="pre_contactus" class="row">
 		<div class="splash_image_wrapper title_overlay_wrapper title_right col-lg-12">
-			<img class="img" src="<?php the_field('contact_us_primary_image')['sizes']['desktop_large']; ?>" />
+			<img class="img" src="<?= get_field('contact_us_primary_image')['sizes']['desktop_large']; ?>" />
 			<h2 class="title"><?php the_field('contact_us_tagline'); ?></h2>
 		</div>
 	</section>
@@ -67,7 +67,7 @@ get_header();
 			</div>
 		</div>
 		<div class="col-lg-5">
-			<img class="address_background_img" src="<?= the_field('contact_us_secondary_image')['sizes']['desktop_med']; ?>" />
+			<img class="address_background_img" src="<?= get_field('contact_us_secondary_image')['sizes']['desktop_med']; ?>" />
 		</div>
 		<address class="contact_info_wrap col-lg-6 offset-lg-5">
 			<?php the_field('address', 'option'); ?>
