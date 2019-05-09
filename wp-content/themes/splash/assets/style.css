@@ -5269,6 +5269,15 @@ body.js_clicked_open {
   #mastfooter .left_section {
     display: none; }
 
+  #cover_image .img_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #cover_image .img_wrap .img {
+      max-width: none;
+      object-fit: cover;
+      object-position: center; }
+
   #whoweare .content_part {
     order: -1; }
 
@@ -5286,7 +5295,12 @@ body.js_clicked_open {
     justify-content: flex-start; }
 
   #pre_contactus .splash_image_wrapper {
-    max-height: 75vh; }
+    max-height: 65vh; }
+    #pre_contactus .splash_image_wrapper .img_wrap {
+      display: flex; }
+      #pre_contactus .splash_image_wrapper .img_wrap .img {
+        object-fit: cover;
+        object-position: center; }
 
   #contactus .contact_info_wrap {
     padding: 45px 40px; } }

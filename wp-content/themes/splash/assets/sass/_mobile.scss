@@ -102,6 +102,19 @@ h4 {
 		display: none;
 	}
 }
+#cover_image {
+	.img_wrap {
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.img {
+			max-width: none;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+}
 #whoweare {
 	.content_part {
 		order: -1;
@@ -132,7 +145,14 @@ h4 {
 }
 #pre_contactus {
 	.splash_image_wrapper {
-		max-height: 75vh;
+		max-height: 65vh;
+		.img_wrap {
+			display: flex;
+			.img {
+				object-fit: cover;
+				object-position: center;
+			}
+		}
 	}
 }
 #contactus {
