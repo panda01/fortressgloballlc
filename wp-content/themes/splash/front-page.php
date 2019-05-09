@@ -50,6 +50,7 @@ get_header();
 						<img class="img" src="<?php echo get_sub_field('image')['sizes']['medium_large']; ?>" />
 						<h4 class="title"><?php the_sub_field('title'); ?></h4>
 						<div id="content_<?= $idx; ?>" class="content"><?php the_sub_field('content'); ?></div>
+						<div class="cross"></div>
 					</div>
 				</div>
 			<?php $idx++; endwhile; ?>

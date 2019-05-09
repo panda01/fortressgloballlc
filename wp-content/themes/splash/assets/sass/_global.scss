@@ -176,7 +176,7 @@ $title_overlap: 40px;
 	display: flex;
 	position: relative;
 	&.title_right {
-		.img {
+		.img_wrap {
 			position: relative;
 			margin-left: 0;
 			width: calc(100% - #{$title_overlap});
@@ -293,20 +293,35 @@ section {
 	}
 	.info_square {
 		position: relative;
-		&:after {
-			content: '+';
-			color: #fff;
-			width: 60px;
-			height: 60px;
-			font-size: 80px;
-			font-weight: bold;
+		$cross_height: 40px;
+		$cross_width: 10px;
+		$cross_color: #fff;
+		$cross_box_size: 60px;
+		.cross {
+			width: $cross_box_size;
+			height: $cross_box_size;
 			position: absolute;
-			display: flex;
-			align-items: center;
-			justify-content: center;
 			right: 0;
 			bottom: 0;
 			background-color: $color_light_blue;
+			&:after,
+			&:before {
+				content: '';
+				background-color: $cross_color;
+				position: absolute;
+			}
+			&:before {
+				height: $cross_height;
+				width: $cross_width;
+				left: ($cross_box_size * 0.5) - ($cross_width * 0.5);
+				top: ($cross_box_size * 0.5) - ($cross_height * 0.5);
+			}
+			&:after {
+				width: $cross_height;
+				height: $cross_width;
+				top: ($cross_box_size * 0.5) - ($cross_width * 0.5);
+				left: ($cross_box_size * 0.5) - ($cross_height * 0.5);
+			}
 		}
 		&.js_clicked_open {
 			position: fixed;
