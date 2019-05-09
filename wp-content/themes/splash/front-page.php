@@ -18,15 +18,15 @@ get_header();
 	?>
 	<div id="cover_image" class="title_overlay_wrapper">
 		<?php
-		$cover_img_url = get_field('cover_image');
+		$cover_img = get_field('cover_image')['sizes']['desktop_large'];
 		$cover_text = get_field('cover_text');
 		?>
-		<img class="img" src="<?= $cover_img_url ?>" />
+		<img class="img" src="<?= $cover_img ?>" />
 		<h2 class="title"><?= $cover_text ?></h2>
 	</div>
 	<section id="whoweare" class="row">
 		<div class="col-lg-4 hide-sm hide-md">
-			<img class="img" src="<?= get_field('section_2_image') ?>" />
+			<img class="img" src="<?= get_field('section_2_image')['sizes']['desktop_med'] ?>" />
 		</div>
 		<div class="col-lg-8 content_part">
 			<h1 class="overlay_title"><?= get_field('section_2_title') ?></h1>
@@ -45,7 +45,7 @@ get_header();
 			?>
 				<div class="col-lg-6 info_square" data-js-click="#content_<?= $idx ?>">
 					<div class="info_square_inner">
-						<img class="img" src="<?php the_sub_field('image'); ?>" />
+						<img class="img" src="<?php echo get_sub_field('image')['sizes']['desktop_med']; ?>" />
 						<h4 class="title"><?php the_sub_field('title'); ?></h4>
 						<div id="content_<?= $idx; ?>" class="content"><?php the_sub_field('content'); ?></div>
 					</div>
@@ -55,7 +55,7 @@ get_header();
 	</section>
 	<section id="pre_contactus" class="row">
 		<div class="splash_image_wrapper title_overlay_wrapper title_right col-lg-12">
-			<img class="img" src="<?php the_field('contact_us_primary_image'); ?>" />
+			<img class="img" src="<?php the_field('contact_us_primary_image')['sizes']['desktop_large']; ?>" />
 			<h2 class="title"><?php the_field('contact_us_tagline'); ?></h2>
 		</div>
 	</section>
@@ -67,7 +67,7 @@ get_header();
 			</div>
 		</div>
 		<div class="col-lg-5">
-			<img class="address_background_img" src="<?= the_field('contact_us_secondary_image'); ?>" />
+			<img class="address_background_img" src="<?= the_field('contact_us_secondary_image')['sizes']['desktop_med']; ?>" />
 		</div>
 		<address class="contact_info_wrap col-lg-6 offset-lg-5">
 			<?php the_field('address', 'option'); ?>

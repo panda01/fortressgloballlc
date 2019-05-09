@@ -124,13 +124,10 @@ function paradise_default_theme_setup() {
 	/*
 	add_theme_support( 'post-thumbnails' );
 
-	add_image_size( 'twentyseventeen-featured-image', 2000, 1200, true );
-
-	add_image_size( 'twentyseventeen-thumbnail-avatar', 100, 100, true );
 	 */
+	add_image_size( 'desktop_large', 1500, 0, false );
 
-	// Set the default content width.
-	$GLOBALS['content_width'] = 525;
+	add_image_size( 'desktop_med', 1000, 0, false );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
