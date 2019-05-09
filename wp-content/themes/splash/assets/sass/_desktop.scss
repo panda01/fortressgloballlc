@@ -7,20 +7,19 @@
 
 #whatwedo {
 	.info_square {
-		height: calc_vw(465);
 		&:nth-child(n + 3) {
 			margin-top: 125px;
 		}
 		.title {
-			width: 75%;
+			min-width: 75%;
 			height: 172px;
 		}
 	}
 }
 #contactus {
 	.contact_info_wrap {
-	padding: 90px 80px;
-	position: relative;
-	top: -190px;
-}
+		padding: 90px 80px;
+		position: relative;
+		top: -190px;
+	}
 }
