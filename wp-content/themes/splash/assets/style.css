@@ -5154,7 +5154,7 @@ section + section {
       display: flex; }
     #whatwedo .info_square .img {
       padding: 50px 60px 60px 50px;
-      height: 24.28571vw;
+      height: 27.14286vw;
       object-fit: cover;
       object-position: center; }
     #whatwedo .info_square .title {
@@ -5355,7 +5355,7 @@ body.js_clicked_open {
   #whatwedo .info_square:nth-child(n + 3) {
     margin-top: 125px; }
   #whatwedo .info_square .title {
-    min-width: 75%;
+    width: 75%;
     height: 172px; }
 
   #contactus .contact_info_wrap {
