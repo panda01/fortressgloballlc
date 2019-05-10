@@ -5234,6 +5234,9 @@ body.js_clicked_open {
     .title_overlay_wrapper.title_right {
       left: none; }
 
+  #pre_contactus .splash_image_wrapper {
+    min-height: 400px; }
+
   #whatwedo .info_square + .info_square {
     margin-top: 30px; }
   #whatwedo .info_square .title {
@@ -5380,6 +5383,7 @@ body.js_clicked_open {
     padding-right: 0; }
   #whatwedo .info_square .title {
     width: 75%;
+    max-width: 75%;
     padding: 30px;
     justify-content: flex-start; }
 

@@ -16,7 +16,7 @@ get_header();
 	/* Start the Loop */
 	while ( have_posts() ) : the_post();
 	?>
-	<div id="cover_image" class="title_overlay_wrapper">
+	<div id="cover_image" class="title_overlay_wrapper js_mobile_height_fix">
 		<?php
 		$cover_img = get_field('cover_image')['sizes']['desktop_large'];
 		$cover_text = get_field('cover_text');
