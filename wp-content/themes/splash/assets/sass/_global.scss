@@ -9,6 +9,15 @@ input,
 textarea {
 	box-sizing: border-box;
 }
+nav {
+	ul {
+		padding: 0;
+		list-style: none;
+		li {
+			margin: 0;
+		}
+	}
+}
 // Sticky Footer
 #page {
 	min-height: 100vh;
