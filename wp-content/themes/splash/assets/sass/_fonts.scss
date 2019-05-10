@@ -8,6 +8,7 @@ $paragrah_lineheight: 1.4em;
 h1, h2, h3, h4, h5, h6 {
 	color: $color_black;
 	font-family: $default_font_family;
+	font-weight: 100;
 	line-height: $paragrah_lineheight;
 	text-transform: uppercase;
 	+ p {
