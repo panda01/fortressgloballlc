@@ -9,31 +9,25 @@
 }
 #whatwedo {
 	.info_square {
+		+ .info_square {
+			margin-top: 30px;
+		}
+		.title {
+			left: -30px;
+		}
 		$cross_height: 20px;
 		$cross_width: 5px;
 		$cross_color: #fff;
 		$cross_box_size: 30px;
-		.title {
-			left: -30px;
-		}
 		.img {
-			max-height: 50vh;
 			padding-bottom: $cross_box_size;
 			padding-top: $cross_box_size;
+			padding-right: $cross_box_size;
 		}
 		.plus {
 			width: $cross_box_size;
 			height: $cross_box_size;
-			position: absolute;
 			right: -$cross_box_size;
-			bottom: 0;
-			background-color: $color_light_blue;
-			&:after,
-			&:before {
-				content: '';
-				background-color: $cross_color;
-				position: absolute;
-			}
 			&:before {
 				height: $cross_height;
 				width: $cross_width;

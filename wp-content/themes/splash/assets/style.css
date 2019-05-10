@@ -71,7 +71,7 @@ table {
       margin-left: 0 !important;
       margin-right: 0 !important; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 450px) {
   .container, #masthead, #mastfooter .site-info {
     padding-left: 30px;
     padding-right: 30px;
@@ -210,7 +210,7 @@ table {
 
   .hide-sm {
     display: none !important; } }
-@media screen and (min-width: 768px) and (max-width: 960px) {
+@media screen and (min-width: 450px) and (max-width: 960px) {
   .container, #masthead, #mastfooter .site-info {
     padding-left: 40px;
     padding-right: 40px;
@@ -4816,8 +4816,7 @@ h6,
   font-size: 12px; }
 
 body,
-html,
-p {
+html {
   color: #231f20;
   font-family: "Lato", sans-serif;
   font-size: 18px;
@@ -4830,6 +4829,7 @@ i {
   font-style: italic; }
 
 p {
+  font-family: "Lato", sans-serif;
   margin-bottom: 0; }
   p + ul,
   p + ol,
@@ -5220,7 +5220,7 @@ body.js_clicked_open {
     background-color: rgba(45, 41, 42, 0.9);
     color: #FFF; }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .title_overlay_wrapper {
     width: 100vw !important;
     min-width: 100vw !important;
@@ -5228,23 +5228,18 @@ body.js_clicked_open {
     .title_overlay_wrapper.title_right {
       left: none; }
 
+  #whatwedo .info_square + .info_square {
+    margin-top: 30px; }
   #whatwedo .info_square .title {
     left: -30px; }
   #whatwedo .info_square .img {
-    max-height: 50vh;
     padding-bottom: 30px;
-    padding-top: 30px; }
+    padding-top: 30px;
+    padding-right: 30px; }
   #whatwedo .info_square .plus {
     width: 30px;
     height: 30px;
-    position: absolute;
-    right: -30px;
-    bottom: 0;
-    background-color: #10a5dd; }
-    #whatwedo .info_square .plus:after, #whatwedo .info_square .plus:before {
-      content: '';
-      background-color: #fff;
-      position: absolute; }
+    right: -30px; }
     #whatwedo .info_square .plus:before {
       height: 20px;
       width: 5px;
@@ -5354,13 +5349,29 @@ body.js_clicked_open {
   #whatwedo .info_square.js_clicked_open .info_square_inner {
     left: 10vw;
     max-width: 80vw; }
-  #whatwedo .info_square + .info_square {
-    margin-top: 30px; }
   #whatwedo .info_square .img {
-    height: auto;
-    padding-left: 0;
+    max-height: 50vh;
+    padding-bottom: 30px;
+    padding-top: 30px; }
+  #whatwedo .info_square .plus {
+    width: 30px;
+    height: 30px;
+    right: -30px; }
+    #whatwedo .info_square .plus:before {
+      height: 20px;
+      width: 5px;
+      left: 12.5px;
+      top: 5px; }
+    #whatwedo .info_square .plus:after {
+      width: 20px;
+      height: 5px;
+      top: 12.5px;
+      left: 5px; }
+  #whatwedo .info_square .img {
+    height: 380px;
     padding-right: 0; }
   #whatwedo .info_square .title {
+    width: 75%;
     padding: 30px;
     justify-content: flex-start; }
 

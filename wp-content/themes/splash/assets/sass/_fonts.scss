@@ -27,8 +27,7 @@ h5,
 h6,
 .h6 { font-size: 12px; }
 body,
-html,
-p {
+html {
 	color: $color_black;
 	font-family: $default_font_family;
 	font-size: 18px;
@@ -38,6 +37,7 @@ p {
 b { font-weight: bold; }
 i { font-style: italic; }
 p {
+	font-family: $default_font_family;
 	margin-bottom: 0;
 	+ ul,
 	+ ol,
