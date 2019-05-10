@@ -5168,7 +5168,8 @@ section + section {
         padding-top: 90px;
         width: 100%;
         padding-left: 100px;
-        justify-content: flex-start; }
+        justify-content: flex-start;
+        margin: 0; }
       #whatwedo .info_square.js_clicked_open .content {
         margin: 0;
         height: auto;
