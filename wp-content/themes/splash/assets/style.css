@@ -5100,7 +5100,8 @@ section + section {
 #whatwedo {
   margin-top: 125px; }
   #whatwedo .title {
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 40px; }
   #whatwedo .info_square {
     position: relative; }
     #whatwedo .info_square.js_clicked_open .info_square_inner {
