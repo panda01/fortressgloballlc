@@ -5077,6 +5077,13 @@ section + section {
     text-align: center; }
   #whatwedo .info_square {
     position: relative; }
+    #whatwedo .info_square.js_clicked_open .info_square_inner {
+      left: 5vw !important;
+      max-width: 90vw !important;
+      margin-top: 25px !important;
+      margin-bottom: 25px !important; }
+    #whatwedo .info_square.js_clicked_open .title {
+      padding: 20px 20px 0 20px !important; }
     #whatwedo .info_square .plus {
       width: 60px;
       height: 60px;

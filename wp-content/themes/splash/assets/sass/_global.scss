@@ -306,6 +306,17 @@ section {
 		$cross_width: 10px;
 		$cross_color: #fff;
 		$cross_box_size: 60px;
+		&.js_clicked_open {
+			.info_square_inner {
+				left: 5vw !important;
+				max-width: 90vw !important;
+				margin-top: 25px !important;
+				margin-bottom: 25px !important;
+			}
+			.title {
+				padding: 20px 20px 0 20px !important;
+			}
+		}
 		.plus {
 			width: $cross_box_size;
 			height: $cross_box_size;
