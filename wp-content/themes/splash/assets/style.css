@@ -5002,7 +5002,7 @@ a:active {
 #masthead {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
   padding-left: 60px;
   padding-right: 60px;
   padding-top: 50px;
@@ -5187,6 +5187,41 @@ body.js_clicked_open {
     background-color: rgba(45, 41, 42, 0.9);
     color: #FFF; }
 
+@media screen and (max-width: 400px) {
+  .title_overlay_wrapper {
+    width: 100vw !important;
+    min-width: 100vw !important;
+    left: -30px; }
+    .title_overlay_wrapper.title_right {
+      left: none; }
+
+  #whatwedo .info_square .title {
+    left: -30px; }
+  #whatwedo .info_square .img {
+    max-height: 50vh;
+    padding-bottom: 30px;
+    padding-top: 30px; }
+  #whatwedo .info_square .plus {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -30px;
+    bottom: 0;
+    background-color: #10a5dd; }
+    #whatwedo .info_square .plus:after, #whatwedo .info_square .plus:before {
+      content: '';
+      background-color: #fff;
+      position: absolute; }
+    #whatwedo .info_square .plus:before {
+      height: 20px;
+      width: 5px;
+      left: 12.5px;
+      top: 5px; }
+    #whatwedo .info_square .plus:after {
+      width: 20px;
+      height: 5px;
+      top: 12.5px;
+      left: 5px; } }
 @media screen and (max-width: 960px) {
   h1 {
     font-size: 45px; }
@@ -5289,7 +5324,9 @@ body.js_clicked_open {
   #whatwedo .info_square + .info_square {
     margin-top: 30px; }
   #whatwedo .info_square .img {
-    height: auto; }
+    height: auto;
+    padding-left: 0;
+    padding-right: 0; }
   #whatwedo .info_square .title {
     padding: 30px;
     justify-content: flex-start; }

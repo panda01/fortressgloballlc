@@ -208,7 +208,7 @@ $transition_timer: 300ms;
 	@extend .container;
 	display: flex;
 	justify-content: space-between;
-	align-items: stretch;
+	align-items: center;
 	padding-left: $lg_side_margin;
 	padding-right: $lg_side_margin;
 	padding-top: 50px;
