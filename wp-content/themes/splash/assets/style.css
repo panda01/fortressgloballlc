@@ -4873,10 +4873,10 @@ address {
   display: none; }
 
 .main ul {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: flex-start; }
+  list-style-type: disc;
+  padding-left: 1.5em; }
+  .main ul li + li {
+    margin-top: 1.5em; }
 
 .hide {
   display: none; }
