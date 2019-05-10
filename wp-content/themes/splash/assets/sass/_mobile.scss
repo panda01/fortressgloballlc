@@ -122,6 +122,9 @@ h4 {
 }
 #whatwedo {
 	.info_square {
+		&:nth-child(n + 3) {
+			margin-top: 60px;
+		}
 		&.js_clicked_open {
 			.content {
 				padding: 20px;

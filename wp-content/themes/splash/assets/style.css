@@ -5345,6 +5345,8 @@ body.js_clicked_open {
   #whoweare .content_part {
     order: -1; }
 
+  #whatwedo .info_square:nth-child(n + 3) {
+    margin-top: 60px; }
   #whatwedo .info_square.js_clicked_open .content {
     padding: 20px; }
   #whatwedo .info_square.js_clicked_open .info_square_inner {
