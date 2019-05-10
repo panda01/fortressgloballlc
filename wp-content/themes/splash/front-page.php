@@ -24,14 +24,15 @@ get_header();
 		<div class="img_wrap js_parallax_img_wrap">
 			<img class="img" src="<?= $cover_img ?>" />
 		</div>
-		<h2 class="title"><?= $cover_text ?></h2>
+		<h2 class="title"><div class="inner"><?= $cover_text ?></div></h2>
 	</div>
 	<section id="whoweare" class="row">
 		<div class="col-lg-4 hide-sm hide-md js_parallax_img_wrap">
 			<img class="img" src="<?= get_field('section_2_image')['sizes']['desktop_med'] ?>" />
 		</div>
 		<div class="col-lg-8 content_part">
-			<h1 class="overlay_title"><?= get_field('section_2_title') ?></h1>
+			<h1 class="overlay_title"><div class="inner"><?= get_field('section_2_title') ?></div></h1>
+			<img class="img hide-lg" src="<?= get_field('section_2_image')['sizes']['desktop_med'] ?>" />
 			<div class="content">
 				<?= get_field('section_2_content'); ?>
 			</div>
@@ -61,11 +62,11 @@ get_header();
 			<div class="img_wrap js_parallax_img_wrap">
 				<img class="img" src="<?= get_field('contact_us_primary_image')['sizes']['desktop_large']; ?>" />
 			</div>
-			<h2 class="title"><?php the_field('contact_us_tagline'); ?></h2>
+			<h2 class="title"><div class="inner"><?php the_field('contact_us_tagline'); ?></div></h2>
 		</div>
 	</section>
 	<section id="contactus" class="row">
-		<h1 class="overlay_title col-lg-9"><?php the_field('contact_us_secondary_title'); ?></h1>
+		<h1 class="overlay_title col-lg-9"><div class="inner"><?php the_field('contact_us_secondary_title'); ?></div></h1>
 		<div class="contact_form_wrapper col-lg-6 offset-lg-1">
 			<div class="content h4">
 				<?= the_field('contact_form_content'); ?>

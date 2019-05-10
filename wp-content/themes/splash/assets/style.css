@@ -210,7 +210,7 @@ table {
 
   .hide-sm {
     display: none !important; } }
-@media screen and (min-width: 450px) and (max-width: 960px) {
+@media screen and (min-width: 450px) and (max-width: 1024px) {
   .container, #masthead, #mastfooter .site-info {
     padding-left: 40px;
     padding-right: 40px;
@@ -349,7 +349,7 @@ table {
 
   .hide-md {
     display: none !important; } }
-@media screen and (min-width: 961px) {
+@media screen and (min-width: 1025px) {
   .container, #masthead, #mastfooter .site-info {
     padding-left: 60px;
     padding-right: 60px;
@@ -5120,7 +5120,9 @@ section + section {
       margin-top: 25px !important;
       margin-bottom: 25px !important; }
     #whatwedo .info_square.js_clicked_open .title {
-      padding: 20px 20px 0 20px !important; }
+      padding: 20px 20px 0 20px !important;
+      width: auto;
+      max-width: none; }
     #whatwedo .info_square .plus {
       width: 60px;
       height: 60px;
@@ -5265,7 +5267,7 @@ body.js_clicked_open {
       height: 5px;
       top: 12.5px;
       left: 5px; } }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
   h1 {
     font-size: 45px; }
 
@@ -5403,7 +5405,7 @@ body.js_clicked_open {
 
   #contactus .contact_info_wrap {
     padding: 45px 40px; } }
-@media screen and (min-width: 961px) {
+@media screen and (min-width: 1025px) {
   #whoweare .img {
     margin-top: 75px; }
 
