@@ -230,6 +230,10 @@ $transition_timer: 300ms;
 	}
 	.menu {
 		display: flex;
+		list-style-type: none;
+		li {
+			margin-top: 0;
+		}
 		.menu-item + .menu-item {
 			margin-left: 80px;
 		}

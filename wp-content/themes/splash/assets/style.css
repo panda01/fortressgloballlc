@@ -5062,7 +5062,10 @@ a:active {
     #masthead .logo > img {
       max-height: 100%; }
   #masthead .menu {
-    display: flex; }
+    display: flex;
+    list-style-type: none; }
+    #masthead .menu li {
+      margin-top: 0; }
     #masthead .menu .menu-item + .menu-item {
       margin-left: 80px; }
 
