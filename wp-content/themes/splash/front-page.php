@@ -38,6 +38,15 @@ get_header();
 			</div>
 		</div>
 	</section>
+	<section id="partners" class="row">
+		<div class="col-lg-12 partners_wrap">
+			<?php while(have_rows('partners_info')): the_row(); ?>
+				<div class="partner">
+					<img class="img" src="<?php echo get_sub_field('logo')['sizes']['desktop_med']; ?>" />
+				</div>
+			<?php endwhile; ?>
+		</div>
+	</section>
 	<section id="whatwedo" class="row">
 		<h1 class="col-lg-12 title"><?= get_field('section_3_title'); ?></h1>
 		<div class="col-lg-12 content"></div>

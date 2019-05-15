@@ -5107,6 +5107,13 @@ section + section {
   #whoweare .content {
     margin-top: 125px; }
 
+#partners .partners_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+#partners .partner {
+  width: 200px; }
+
 #whatwedo {
   margin-top: 125px; }
   #whatwedo .title {

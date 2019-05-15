@@ -1,0 +1,37 @@
+/*
+ * Some helpers for wordpress and the specifics of it
+ *
+ *
+ */
+/* Make sure the footer is "sticky" expects the layout
+ * 	body[.admin-bar]
+ * 		#page
+ * 			header
+ * 			#content
+ * 			footer
+ */
+body {
+	min-height: 100vh;
+	display: flex;
+	&.admin-bar {
+		min-height: calc(100vh - 32px);
+	}
+	> #page {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		> #content {
+			flex-grow: 1;
+		}
+	}
+}
+.screen-reader-text { display: none; }
+.text_align_center {
+	text-align: center;
+}
+a {
+	color: $black;
+}
+img {
+	max-width: 100%;
+}

@@ -288,6 +288,16 @@ section {
 		margin-top: 125px;
 	}
 }
+#partners {
+	.partners_wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+	.partner {
+		width: 200px;
+	}
+}
 #whatwedo {
 	margin-top: 125px;
 	.title {
